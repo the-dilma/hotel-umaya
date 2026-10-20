@@ -34,7 +34,7 @@ export default function Navbar() {
             alt="Hotel Umaya"
             width={1520}
             height={426}
-            priority
+            preload
             className="h-14 w-auto"
           />
         </Link>

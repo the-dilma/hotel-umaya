@@ -15,6 +15,20 @@
   --font-script: var(--font-great-vibes);
   --font-serif: var(--font-cormorant);
   --font-sans: var(--font-lato);
+
+  /* CSS-only entrance animation (`animate-fade-up`) — runs before JavaScript loads. */
+  --animate-fade-up: fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }
 
 /* Base styles live in a layer so utility classes (e.g. `font-script`) can override them. */

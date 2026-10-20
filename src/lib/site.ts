@@ -16,3 +16,6 @@ export const contact = {
   email: "info@hotelumaya.lk", // TODO
   whatsapp: "94000000000", // TODO: number without "+" or spaces
 };
+
+export const whatsappLink = `https://wa.me/${contact.whatsapp}`;
+export const phoneLink = `tel:${contact.phones[0].replace(/\s/g, "")}`;
