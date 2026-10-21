@@ -7,7 +7,7 @@
 <p align="center">
   A responsive, animated showcase website for a Sri Lankan wedding and reception venue.
   <br />
-  <strong>Live site:</strong> <em>coming soon</em>
+  <strong>Live site:</strong> <a href="https://hotel-umaya.vercel.app">hotel-umaya.vercel.app</a>
 </p>
 
 <p align="center">
@@ -120,7 +120,8 @@ Then open [http://localhost:3000](http://localhost:3000).
 ## Roadmap
 
 - [ ] Replace placeholder photos and text with the hotel's real content
-- [ ] Deploy to Vercel and connect a custom domain
+- [x] Deploy to Vercel
+- [ ] Connect a custom domain
 - [ ] Add screenshots to this README
 - [ ] Optional: Sinhala / English language switch
 - [ ] Optional: CMS so hotel staff can update content themselves
