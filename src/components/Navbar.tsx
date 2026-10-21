@@ -30,10 +30,10 @@ export default function Navbar() {
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link href="/" aria-label="Hotel Umaya home">
           <Image
-            src="/images/logo-temp.jpg"
+            src="/images/logo.png"
             alt="Hotel Umaya"
-            width={1520}
-            height={426}
+            width={1426}
+            height={447}
             preload
             className="h-14 w-auto"
           />
