@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Car, Heart, MessageCircle, Phone, Sparkles, Users, Utensils } from "lucide-react";
+import { Car, Heart, Sparkles, Users, Utensils } from "lucide-react";
+import CallToAction from "@/components/CallToAction";
 import HeroSlider from "@/components/home/HeroSlider";
 import Reviews from "@/components/home/Reviews";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { about, features, galleryPreview, halls } from "@/lib/content";
-import { phoneLink, whatsappLink } from "@/lib/site";
 
 const featureIcons = { utensils: Utensils, sparkles: Sparkles, car: Car, heart: Heart };
 
@@ -137,32 +137,7 @@ export default function Home() {
         <Reviews />
       </section>
 
-      {/* Call to action */}
-      <section className="mx-auto max-w-4xl px-4 py-24 text-center sm:px-6">
-        <Reveal>
-          <p className="font-script text-5xl text-crimson sm:text-6xl">Let&apos;s celebrate together</p>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-charcoal/80">
-            Visit us or get in touch to check dates, view our halls and plan every detail of your
-            special day.
-          </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a
-              href={phoneLink}
-              className="flex items-center gap-2 bg-crimson px-8 py-3 text-sm uppercase tracking-[0.2em] text-white transition-colors hover:bg-crimson-dark"
-            >
-              <Phone size={16} /> Call us
-            </a>
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 border border-charcoal px-8 py-3 text-sm uppercase tracking-[0.2em] transition-colors hover:bg-charcoal hover:text-ivory"
-            >
-              <MessageCircle size={16} /> WhatsApp
-            </a>
-          </div>
-        </Reveal>
-      </section>
+      <CallToAction />
     </>
   );
 }

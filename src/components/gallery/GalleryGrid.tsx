@@ -5,6 +5,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { gallery, galleryCategories, type GalleryCategory } from "@/lib/content";
+import TabButtons from "../TabButtons";
 
 type Filter = "All" | GalleryCategory;
 const filters: Filter[] = ["All", ...galleryCategories];
@@ -39,25 +40,7 @@ export default function GalleryGrid() {
 
   return (
     <>
-      <div className="mb-12 flex flex-wrap justify-center gap-2" role="tablist">
-        {filters.map((f) => (
-          <button
-            key={f}
-            type="button"
-            role="tab"
-            aria-selected={filter === f}
-            onClick={() => setFilter(f)}
-            className={`relative px-5 py-2 text-sm uppercase tracking-[0.2em] transition-colors ${
-              filter === f ? "text-white" : "text-charcoal hover:text-crimson"
-            }`}
-          >
-            {filter === f && (
-              <motion.span layoutId="gallery-filter" className="absolute inset-0 bg-crimson" />
-            )}
-            <span className="relative">{f}</span>
-          </button>
-        ))}
-      </div>
+      <TabButtons tabs={filters} active={filter} onChange={setFilter} id="gallery-filter" />
 
       {/* Dense grid: every 4th photo is twice as tall for a varied, editorial layout. */}
       <motion.ul
